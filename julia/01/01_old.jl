@@ -1,5 +1,8 @@
 ### Code 1.1
 
+### wrap code in module to isolate namespace
+module Code0101
+
 # include useful functions for gnuplot
 include("gpfuncs.jl")
 
@@ -18,8 +21,4 @@ t = [0:Δt:10;]
 # calculate displacement
 x = exp.(-0.5t) .* (0.16cos.(2.96t) .+ 0.027sin.(2.96t))
 
-# write data for gnuplot
-writedat([t;; x], "01.dat")
-
-# run gnuplot on written data
-rungnuplot("01.gp")
+end

@@ -1,3 +1,5 @@
+import DelimitedFiles
+
 function writedat(mat, file::String)
     open(file, "w") do io
         DelimitedFiles.writedlm(io, mat)
